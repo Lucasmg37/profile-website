@@ -9,8 +9,17 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
   }
 
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+  #__next {
+    height: 100%;
+  }
+
   body {
-    font-size: 8px;
+    /* font-size: 16px; */
     font-family: 'Inter', sans-serif;
   }
 
