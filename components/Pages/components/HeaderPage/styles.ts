@@ -9,7 +9,7 @@ export const Container = styled.div`
     letter-spacing: 3px;
     font-size: 14px;
     line-height:28px;
-    margin-top: 24px
+    margin-top: 24px;
   }
 
   > div {
@@ -22,6 +22,7 @@ export const Container = styled.div`
       font-weight: 700;
       opacity: .1;
       letter-spacing: 8px;
+      text-transform: uppercase;
     }
 
     h1 {

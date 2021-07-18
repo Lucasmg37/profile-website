@@ -16,6 +16,18 @@ export const Container = styled.footer`
   margin-top: auto;
   position: relative;
 
+  div {
+    height: 48px;
+    color: rgba(255,255,255,.4);
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    padding: 0 32px;
+  }
+
   .upButton {
     position: absolute;
     right: 48px;
@@ -33,11 +45,12 @@ export const Container = styled.footer`
         color: rgba(255,255,255,.5);
         padding: 8px;
         transition: all ease .2s;
+        height: 48px;
+        display: inline-block;
 
         &:hover {
           color: rgba(255,255,255,1);
         }
-
       }
     }
 

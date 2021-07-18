@@ -8,35 +8,37 @@ type FooterProps = {
   onUp: () => void;
   showUp?: boolean;
   showDown?: boolean;
+  isLast?: boolean;
 }
 
-const Footer = ({ onDown, showUp, showDown, onUp }: FooterProps) => {
+const Footer = ({ onDown, showUp, showDown, onUp, isLast }: FooterProps) => {
   return (
     <Container>
-      <ul>
-        <li><a href="#teste">GitHub</a></li>
-        <li><a href="#teste">Linkedin</a></li>
-        <li><a href="#teste">Medium</a></li>
-      </ul>
 
-      {showUp && showDown && (
-        <ButtonCircle className="upButton" onClick={() => onUp()} >
-          <HiOutlineArrowNarrowUp />
-        </ButtonCircle>
+      {isLast ? (<div>
+        <p>2021 - Lucas Jr Dias</p>
+        <p>Todos os direitos reservados</p>
+      </div>) : (
+        <>
+          <ul>
+            <li><a href="#teste">GitHub</a></li>
+            <li><a href="#teste">Linkedin</a></li>
+            <li><a href="#teste">Medium</a></li>
+          </ul>
+
+          {showUp && showDown && (
+            <ButtonCircle className="upButton" onClick={() => onUp()} >
+              <HiOutlineArrowNarrowUp />
+            </ButtonCircle>
+          )}
+
+          {showDown && (
+            <ButtonCircle onClick={() => onDown()} >
+              <HiOutlineArrowNarrowDown />
+            </ButtonCircle>
+          )}
+        </>
       )}
-
-      {showDown && (
-        <ButtonCircle onClick={() => onDown()} >
-          <HiOutlineArrowNarrowDown />
-        </ButtonCircle>
-      )}
-
-      {!showDown && showUp && (
-        <ButtonCircle onClick={() => onUp()} >
-          <HiOutlineArrowNarrowUp />
-        </ButtonCircle>
-      )}
-
     </Container>
   );
 }

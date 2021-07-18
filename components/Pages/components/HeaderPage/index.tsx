@@ -3,20 +3,25 @@ import Dots from '../../../Dots';
 
 import { Container } from './styles';
 
-const HeaderPage = () => {
+type HeaderPageProps = {
+  title: string,
+  description: string,
+}
+
+const HeaderPage = ({ title, description }: HeaderPageProps) => {
   return (
     <Container >
       <div>
         <p>
-          SOBRE MIM
+          {title}
         </p>
-        <h1>Sobre Mim</h1>
+        <h1>{title}</h1>
         <div>
           <Dots qtdDots={10} qtdLines={4} />
           <Dots qtdDots={10} qtdLines={4} inverter />
         </div>
       </div>
-      <p>Conheça mais sobre mim</p>
+      <p>{description}</p>
     </Container>
   );
 }

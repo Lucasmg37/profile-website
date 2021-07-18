@@ -11,6 +11,8 @@ import Page from '../layout/Page'
 import { Container } from '../styles/pages/Home'
 import { AnimatePresence } from 'framer-motion';
 import { getAnimationPage } from '../utils/animations'
+import Portfolio from '../components/Pages/Portfolio'
+import Contact from '../components/Pages/Contact'
 
 export default function Home() {
 
@@ -43,7 +45,21 @@ export default function Home() {
                 <AboutMe variants={getAnimationPage(atualPage > 2)} />
               )}
             </AnimatePresence>
-            {/* {getPage(atualPage)} */}
+            <AnimatePresence>
+              {atualPage === 3 && (
+                <Portfolio variants={getAnimationPage(atualPage > 3)} />
+              )}
+            </AnimatePresence>
+
+            <AnimatePresence>
+              {atualPage === 4 && (
+                <Contact
+                  goToHome={() => handlePage(1)}
+                  goToPrevious={() => handlePage(3)}
+                  variants={getAnimationPage(atualPage > 4)}
+                />
+              )}
+            </AnimatePresence>
 
           </Page>
           <Count page={atualPage} totalPage={totalPages} />
@@ -53,6 +69,7 @@ export default function Home() {
           onUp={() => handlePage(atualPage - 1)}
           showDown={atualPage !== totalPages}
           showUp={atualPage > 1}
+          isLast={atualPage === totalPages}
         />
       </main>
     </Container>
