@@ -3,14 +3,18 @@ import ButtonCircle from '../Buttons/ButtonCircle';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Container, LogoName } from './styles';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onOpenMenu: () => void
+}
+
+const Header: React.FC<HeaderProps> = ({ onOpenMenu }: HeaderProps) => {
   return (
     <Container>
       <LogoName>
         <span>LUC</span>
         <span>AS</span>
       </LogoName>
-      <ButtonCircle><AiOutlineMenu /></ButtonCircle>
+      <ButtonCircle onClick={onOpenMenu} ><AiOutlineMenu /></ButtonCircle>
     </Container>
   );
 }

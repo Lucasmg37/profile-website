@@ -45,7 +45,7 @@ const AboutMe: React.FC<AbouteMeProps> = ({ variants }: AbouteMeProps) => {
       exit="exit"
       transition={{ duration: 1 }}
     >
-      <HeaderPage title="Sobre Mim" description="Conheça mais mim" />
+      <HeaderPage title="Sobre Mim" description="Conheça mais sobre mim" />
 
       <Content>
         <aside>

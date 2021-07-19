@@ -8,16 +8,18 @@ import AboutMe from '../components/Pages/AboutMe'
 import Introduction from '../components/Pages/Introduction'
 import Paginator from '../components/Paginator'
 import Page from '../layout/Page'
-import { Container } from '../styles/pages/Home'
+import { Container, Content } from '../styles/pages/Home'
 import { AnimatePresence } from 'framer-motion';
 import { getAnimationPage } from '../utils/animations'
 import Portfolio from '../components/Pages/Portfolio'
 import Contact from '../components/Pages/Contact'
+import Menu from '../components/Menu'
 
 export default function Home() {
 
   const totalPages = 4;
   const [atualPage, setAtualPage] = useState(1);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handlePage = (page: number) => {
     setAtualPage(page);
@@ -31,8 +33,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Header />
-        <div>
+        <AnimatePresence>
+          {isMenuOpen && (
+            <Menu
+              active={atualPage}
+              onChangePage={page => handlePage(page)}
+              onClose={() => setMenuOpen(false)}
+            />
+          )}
+        </AnimatePresence>
+        <Header onOpenMenu={() => setMenuOpen(true)} />
+        <Content>
           <Paginator page={atualPage} />
           <Page>
             <AnimatePresence>
@@ -63,7 +74,7 @@ export default function Home() {
 
           </Page>
           <Count page={atualPage} totalPage={totalPages} />
-        </div>
+        </Content>
         <Footer
           onDown={() => handlePage(atualPage + 1)}
           onUp={() => handlePage(atualPage - 1)}

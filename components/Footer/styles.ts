@@ -15,8 +15,9 @@ export const Container = styled.footer`
   justify-content: space-between;
   margin-top: auto;
   position: relative;
+  min-height: 112px;
 
-  div {
+  .copyright {
     height: 48px;
     color: rgba(255,255,255,.4);
     font-weight: 400;
@@ -26,6 +27,14 @@ export const Container = styled.footer`
     width: 100%;
     font-size: 14px;
     padding: 0 32px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
   }
 
   .upButton {
