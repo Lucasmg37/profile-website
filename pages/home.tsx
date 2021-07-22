@@ -14,6 +14,7 @@ import { getAnimationPage } from '../utils/animations'
 import Portfolio from '../components/Pages/Portfolio'
 import Contact from '../components/Pages/Contact'
 import Menu from '../components/Menu'
+import Background from '../components/Background'
 
 export default function Home() {
 
@@ -32,6 +33,7 @@ export default function Home() {
         <meta name="description" content="FronEnd Web Developer" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Background />
       <main>
         <AnimatePresence>
           {isMenuOpen && (

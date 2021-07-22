@@ -22,12 +22,10 @@ export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin-right: auto;
   position: relative;
 
   > div {
     > div {
-      /* opacity: .5; */
       animation: ${animation} ease-in-out 5s infinite;
     }
 

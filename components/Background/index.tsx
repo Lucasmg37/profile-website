@@ -1,7 +1,9 @@
 import React from 'react';
 
+import { Container } from './styles';
+
 const Background: React.FC = () => {
-  return <div />;
+  return <Container />;
 }
 
 export default Background;

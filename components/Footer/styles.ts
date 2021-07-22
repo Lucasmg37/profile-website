@@ -12,10 +12,13 @@ export const Container = styled.footer`
   padding: 32px 48px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   margin-top: auto;
   position: relative;
   min-height: 112px;
+
+  img {
+    height: 48px;
+  }
 
   .copyright {
     height: 48px;
@@ -48,14 +51,20 @@ export const Container = styled.footer`
     display: flex;
     gap: 1rem;
     font-size: 16px;
+    margin-right: auto;
+    margin-left: 32px;
 
     li {
       a {
         color: rgba(255,255,255,.5);
         padding: 8px;
         transition: all ease .2s;
-        height: 48px;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-right: 8px;
+        }
 
         &:hover {
           color: rgba(255,255,255,1);

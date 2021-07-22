@@ -35,10 +35,19 @@ export const Container = styled(motion.div)`
      }
 
      ul {
-       margin-top: 8px;
-       display: flex;
-       gap: 24px;
+        margin-top: 8px;
+        display: flex;
+        gap: 24px;
         font-weight: 600;
+        
+        a {
+          display: flex;
+          align-items: center;
+
+          svg {
+            margin-right: 8px;
+          }
+        }
      }
   }
 

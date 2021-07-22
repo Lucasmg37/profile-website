@@ -7,7 +7,6 @@ export const Container = styled.div`
   overflow: hidden;
 
   > main {
-    background: #111;
     display: flex;
     flex-direction: column;
     height: 100%;
