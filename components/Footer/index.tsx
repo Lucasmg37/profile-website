@@ -27,7 +27,8 @@ const Footer = ({ onDown, showUp, showDown, onUp, isLast }: FooterProps) => {
             className="copyright"
           >
             <p>2021 - Lucas Jr Dias</p>
-            <p>Todos os direitos reservados</p>
+            <p>Todos os direitos reservados | Design by: <a target="_blank" href="https://www.behance.net/gallery/114090025/Personal-Portfolio">
+              Louis Daniel Baclao</a></p>
           </motion.div>
         )}
       </AnimatePresence>

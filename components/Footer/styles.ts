@@ -18,6 +18,7 @@ export const Container = styled.footer`
 
   img {
     height: 48px;
+    border-radius: 50%;
   }
 
   .copyright {
