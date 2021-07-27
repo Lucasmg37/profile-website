@@ -8,6 +8,7 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
+  justify-content: center;
 `;
 
 export const Content = styled.div`

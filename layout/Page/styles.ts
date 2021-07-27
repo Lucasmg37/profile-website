@@ -1,11 +1,25 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* background: #151515; */
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  height: 100%;
   flex-direction: column;
-  /* overflow: scroll; */
+  margin: auto;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  &::-webkit-scrollbar-track {
+    background:rgba(255,255,255, .2);
+    border-radius: 16px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255, .2);
+    outline: 0px;
+    border-radius: 16px;
+  }
+
 `;

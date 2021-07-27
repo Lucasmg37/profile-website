@@ -23,6 +23,7 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   gap: 24px;
   position: relative;
+  justify-content: center;
 
   > div {
     > div {

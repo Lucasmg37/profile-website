@@ -9,6 +9,7 @@ export const Container = styled(motion.div)`
   flex-direction: column;
   position: relative;
   width: 800px;
+  justify-content: center;
 
   h1 {
     font-size: 54px;

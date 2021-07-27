@@ -10,6 +10,7 @@ export const Container = styled.div<ContainerProps>`
   max-height: 400px;
   align-items: center;
   gap: 24px;
+  margin: auto 0;
 
   div {
     display: flex;
