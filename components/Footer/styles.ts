@@ -9,70 +9,80 @@ const fadeIn = keyframes`
 `;
 
 export const Container = styled.footer`
-  padding: 32px 48px;
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  position: relative;
-  min-height: 112px;
-
-  img {
-    height: 48px;
-    border-radius: 50%;
-  }
-
-  .copyright {
-    height: 48px;
-    color: rgba(255,255,255,.4);
-    font-weight: 400;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    z-index: 10;
     width: 100%;
-    font-size: 14px;
-    padding: 0 32px;
-  }
 
-  .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .upButton {
-    position: absolute;
-    right: 48px;
-    bottom: 88px;
-    animation: ${fadeIn} .4s forwards;
-  }
-
-  ul {
-    display: flex;
-    gap: 1rem;
-    font-size: 16px;
-    margin-right: auto;
-    margin-left: 32px;
-
-    li {
-      a {
-        color: rgba(255,255,255,.5);
-        padding: 8px;
-        transition: all ease .2s;
-        display: flex;
-        align-items: center;
-
-        svg {
-          margin-right: 8px;
-        }
-
-        &:hover {
-          color: rgba(255,255,255,1);
-        }
-      }
+    img {
+        height: 48px;
+        border-radius: 50%;
+        bottom: 32px;
+        left: 48px;
+        position: absolute;
     }
 
-  }
+    .copyright {
+        height: 48px;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 48px 32px;
+        position: absolute;
+        bottom: 0;
+    }
 
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .upButton {
+        position: absolute;
+        right: 48px;
+        bottom: 88px;
+        animation: ${fadeIn} 0.4s forwards;
+    }
+
+    .downButton {
+        position: absolute;
+        right: 48px;
+        bottom: 32px;
+    }
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        font-size: 16px;
+        margin-right: auto;
+        margin-left: 32px;
+        bottom: 32px;
+        position: absolute;
+        left: 80px;
+
+        li {
+            a {
+                color: rgba(255, 255, 255, 0.5);
+                padding: 8px;
+                transition: all ease 0.2s;
+                display: flex;
+                align-items: center;
+
+                svg {
+                    margin-right: 8px;
+                }
+
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
 `;

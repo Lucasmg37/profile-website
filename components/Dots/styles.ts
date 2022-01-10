@@ -18,7 +18,7 @@ interface DotProps {
 
 export const Dot = styled.span<DotProps>`
   display: block;
-  background: rgba(225,255,255, .7);
+  background: rgba(0, 241, 255, .7);
   height: 2px;
   width: 2px;
   opacity: ${({opacity}) => opacity};

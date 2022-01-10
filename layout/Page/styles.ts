@@ -7,7 +7,7 @@ export const Container = styled.div`
   height: 100%;
   flex-direction: column;
   margin: auto;
-  overflow-y: auto;
+  overflow: auto;
 
   &::-webkit-scrollbar {
     width: 0px;

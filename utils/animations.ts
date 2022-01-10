@@ -6,19 +6,19 @@ export const getAnimationPage = (isInverse: boolean) => {
   return {
     hidden: {
       opacity: 0,
-      transform: 'translateY(' + up + ')',
+      // transform: 'translateY(' + up + ')',
       display: 'none',
     },
     exit: {
       opacity: 0,
-      transform: 'translateY(' + down + ')',
+      // transform: 'translateY(' + down + ')',
       transition: {
         duration: .5,
       }
     },
     show: {
       opacity: 1,
-      transform: 'translateY(0px)',
+      // transform: 'translateY(0px)',
       display: 'flex',
       transition: {
         delay: .5,

@@ -15,7 +15,7 @@ const HeaderPage = ({ title, description }: HeaderPageProps) => {
         <p>
           {title}
         </p>
-        <h1>{title}</h1>
+        <h1><span>{title}</span></h1>
         <div>
           <Dots qtdDots={10} qtdLines={4} />
           <Dots qtdDots={10} qtdLines={4} inverter />

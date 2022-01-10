@@ -14,67 +14,66 @@ interface AbouteMeProps {
 }
 
 const Portfolio: React.FC<AbouteMeProps> = ({ variants }: AbouteMeProps) => {
-
   const mockup = [
     {
-      name: 'Music Share',
-      stack: 'React',
-      type: 'Pessoal',
-      image: 'https://imag.malavida.com/mvimgbig/download-fs/spotify-5641-5.jpg'
+      name: 'Resultrack',
+      stack: ['React', 'Bootstrap', 'Sass'],
+      type: 'Confidencial',
+      image: '/static/images/portifolio/resultrack.jpg',
     },
     {
-      name: 'Music Share',
-      stack: 'React',
-      type: 'Pessoal',
-      image: 'https://imag.malavida.com/mvimgbig/download-fs/spotify-5641-5.jpg'
+      name: 'Encontro Gamer de Pará de Minas',
+      stack: ['Vue', 'Sass'],
+      type: 'Acadêmico',
+      image: '/static/images/portifolio/egpm.jpg',
     },
+    // {
+    //   name: 'CMS - Encontro Gamer de Pará de Minas',
+    //   stack: ['Vue', 'Sass', 'Bootstrap'],
+    //   type: 'Acadêmico',
+    //   image: '/static/images/portifolio/egpmadmin.jpg',
+    // },
     {
-      name: 'Music Share',
-      stack: 'React',
+      name: 'NarutoDex',
+      stack: ['NextJs', 'React'],
       type: 'Pessoal',
-      image: 'https://imag.malavida.com/mvimgbig/download-fs/spotify-5641-5.jpg'
+      image: '/static/images/portifolio/narutodex.jpg',
     },
   ];
 
-  const generateItems = (items: { name: string, type: string, image: string, stack: string }[]) => {
+  const generateItems = (items: { name: string; type: string; image: string; stack: string[] }[]) => {
     return items.map((item, index) => (
-      <li>
+      <li key={index}>
         <button type="button">
           <div>
             <Dots qtdLines={5} qtdDots={8} inverter />
           </div>
-          <div>
-            0{index + 1}
-          </div>
+          <div>0{index + 1}</div>
           <div>
             <p>{item.name} </p>
-            <p>{item.type} - {item.stack}</p>
+            <p>
+              {item.type} - {item.stack[0]}
+            </p>
           </div>
           <div>
             <img src={item.image} />
           </div>
         </button>
-      </li >
+      </li>
     ));
-  }
+  };
 
   return (
-    <Container
-      variants={variants}
-      initial="hidden"
-      animate="show"
-      exit="exit"
-      transition={{ duration: 1 }}
-    >
+    <Container variants={variants} initial="hidden" animate="show" exit="exit" transition={{ duration: 1 }}>
       <HeaderPage title="Portifólio" description="Conheça alguns de meus projetos" />
 
-      <Content>
-        {generateItems(mockup)}
-      </Content>
+      <Content>{generateItems(mockup)}</Content>
 
-      <a href="#teste">VEJA OUTROS PROJETOS <HiOutlineArrowNarrowRight /> </a>
+      <a href="#teste">
+        VEJA OUTROS PROJETOS <HiOutlineArrowNarrowRight />{' '}
+      </a>
     </Container>
   );
-}
+};
 
 export default Portfolio;

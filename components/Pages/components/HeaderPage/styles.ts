@@ -19,16 +19,25 @@ export const Container = styled.div`
 
     p {
       font-size: 80px;
-      font-weight: 700;
+      font-weight: 900;
       opacity: .1;
       letter-spacing: 8px;
       text-transform: uppercase;
     }
 
     h1 {
-      font-weight: normal;
+      font-weight: 900;
       font-size: 56px;
       margin-top: -72px;
+      color: #fff;
+
+      span {
+        background-image: linear-gradient(to right, rgb(0, 241, 255), rgb(0, 173, 255));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
     }
 
     > div {

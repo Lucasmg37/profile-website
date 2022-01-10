@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const Container = styled(motion.div)`
   flex: 1;
-  padding: 32px;
+  padding: 120px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,9 +11,9 @@ export const Container = styled(motion.div)`
 
   > a {
     margin-top: 24px;
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 700;
-    transition: ease .2s all;
+    transition: ease 0.2s all;
     display: flex;
     align-items: center;
 
@@ -23,11 +23,9 @@ export const Container = styled(motion.div)`
     }
 
     &:hover {
-       color: rgba(255,255,255,1);
+      color: rgba(255, 255, 255, 1);
     }
-
   }
-
 `;
 
 export const Content = styled.ul`
@@ -36,6 +34,7 @@ export const Content = styled.ul`
   flex-direction: column;
   gap: 16px;
   margin-top: 80px;
+  overflow: auto;
 
   button {
     display: flex;
@@ -44,28 +43,29 @@ export const Content = styled.ul`
     background: #222;
     border-radius: 4px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     width: 100%;
     align-items: center;
-    opacity: .5;
-    transition: ease-in-out .2s all;
+    opacity: 0.5;
+    transition: ease-in-out 0.2s all;
+    max-width: 1000px;
 
-     /* Dots */
-    > div:nth-child(1){
+    /* Dots */
+    > div:nth-child(1) {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100%;
       position: relative;
-      opacity: .3;
-      transition: ease-in-out .3s all;
+      opacity: 0.3;
+      transition: ease-in-out 0.3s all;
 
-        > div {
-          transition: ease-in-out .5s all;
-           transform: translateX(-5px);
-        }
+      > div {
+        transition: ease-in-out 0.5s all;
+        transform: translateX(-5px);
+      }
 
-       &:before {
+      &:before {
         display: block;
         content: '';
         width: 60%;
@@ -77,34 +77,33 @@ export const Content = styled.ul`
       }
     }
 
-      /* Number */
-    > div:nth-child(2){
+    /* Number */
+    > div:nth-child(2) {
       font-size: 16px;
       font-weight: 600;
       width: 50px;
       text-align: left;
     }
 
-        /* Info */
-    > div:nth-child(3){
+    /* Info */
+    > div:nth-child(3) {
       text-align: left;
 
-      p:first-child{
+      p:first-child {
         font-size: 16px;
         font-weight: 800;
       }
 
-      p:last-child{
+      p:last-child {
         font-size: 14px;
         font-weight: 300;
-        color: rgba(255,255,255,.6);
+        color: rgba(255, 255, 255, 0.6);
         margin-top: 4px;
       }
-
     }
 
     /* Image */
-    > div:nth-child(4){
+    > div:nth-child(4) {
       width: 50%;
       margin-left: auto;
       position: relative;
@@ -115,7 +114,7 @@ export const Content = styled.ul`
         width: 100%;
         position: absolute;
         height: 100%;
-        background: linear-gradient(90deg, #222 15%, rgba(0,0,0,0) 56%);
+        background: linear-gradient(90deg, #222 15%, rgba(0, 0, 0, 0) 56%);
       }
 
       img {
@@ -126,15 +125,14 @@ export const Content = styled.ul`
     }
 
     &:hover {
-      opacity: .9;
-       > div:nth-child(1){
-          opacity: .8;
+      opacity: 0.9;
+      > div:nth-child(1) {
+        opacity: 0.8;
 
-          > div {
-            transform: translateX(5px);
-          }
-
-       }
+        > div {
+          transform: translateX(5px);
+        }
+      }
     }
   }
 `;

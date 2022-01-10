@@ -57,7 +57,7 @@ const Footer = ({ onDown, showUp, showDown, onUp, isLast }: FooterProps) => {
           )}
 
           {showDown && (
-            <ButtonCircle onClick={() => onDown()} >
+            <ButtonCircle  className="downButton" onClick={() => onDown()} >
               <HiOutlineArrowNarrowDown />
             </ButtonCircle>
           )}

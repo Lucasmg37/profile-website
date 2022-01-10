@@ -16,39 +16,45 @@ const animation = keyframes`
   }
 `;
 
-export const Container = styled(motion.div)`
-  flex: 1;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  position: relative;
-  justify-content: center;
+interface ContainerProps {
+    scale: number;
+}
 
-  > div {
+export const Container = styled(motion.div)<ContainerProps>`
+    flex: 1;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    position: relative;
+    justify-content: center;
+
     > div {
-      animation: ${animation} ease-in-out 5s infinite;
+        > div {
+            animation: ${animation} ease-in-out 5s infinite;
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 16px;
+            margin-top: -16px;
+        }
     }
 
-    h3 {
-      font-weight: 300;
-      font-size: 16px;
-      margin-top: -16px;
+    h1 {
+        font-weight: 900;
+        font-size: 48px;
+        transition: linear .5s all;
+        /* transform: perspective(33) translateZ(${({ scale }) => scale}px); */
+        transform: scale(${({ scale }) => scale });
     }
-  }
 
-  h1 {
-    font-weight: normal;
-    font-size: 48px;
-  }
-
-  p {
-    max-width: 400px;
-    opacity: .5;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-size: 14px;
-    line-height:28px;
-  }
-
+    p {
+        max-width: 400px;
+        opacity: 0.5;
+        font-weight: bold;
+        letter-spacing: 3px;
+        font-size: 14px;
+        line-height: 28px;
+    }
 `;

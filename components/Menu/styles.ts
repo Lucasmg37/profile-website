@@ -6,7 +6,7 @@ export const Container = styled(motion.div)`
   height: 100%;
   width: 100%;
   background: rgba(0,0,0,0.5);
-  z-index: 1;
+  z-index: 11;
   display: flex;
   overflow: hidden;
 

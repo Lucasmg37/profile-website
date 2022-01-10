@@ -12,7 +12,7 @@ const fadeIn = keyframes`
 
 export const Container = styled(motion.div)`
   flex: 1;
-  padding: 32px;
+  padding: 120px 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -122,7 +122,7 @@ export const Skills = styled.div`
     align-items: center;
     font-size: 16px;
     opacity: .9;
-    margin-top: 56px;
+    margin-top: 32px;
 
     &::before {
       content: '';
