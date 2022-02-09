@@ -5,9 +5,10 @@ import { Container } from './styles';
 
 interface IntroductionProps {
   variants: any;
+  scale: number;
 }
 
-const Introduction: React.FC<IntroductionProps> = ({ variants }: IntroductionProps) => {
+const Introduction: React.FC<IntroductionProps> = ({ variants, scale }: IntroductionProps) => {
   return (
     <Container
       variants={variants}
