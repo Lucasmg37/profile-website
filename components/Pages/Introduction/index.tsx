@@ -1,17 +1,13 @@
 import React from 'react';
 import Dots from '../../Dots';
-import { AnimationProps } from 'framer-motion/types';
 
 import { Container } from './styles';
-import { getAnimationPage } from '../../../utils/animations';
-import { Variants } from '../../../Models/variants';
 
 interface IntroductionProps {
   variants: any;
-  scale: number;
 }
 
-const Introduction: React.FC<IntroductionProps> = ({ variants, scale }: IntroductionProps) => {
+const Introduction: React.FC<IntroductionProps> = ({ variants }: IntroductionProps) => {
   return (
     <Container
       variants={variants}
@@ -19,7 +15,7 @@ const Introduction: React.FC<IntroductionProps> = ({ variants, scale }: Introduc
       animate="show"
       exit="exit"
       transition={{ duration: 1 }}
-      scale={scale < 1 ? 1 : scale * 10}
+      scale={1}
     >
       <div>
         <Dots qtdDots={15} qtdLines={5} />
