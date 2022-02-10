@@ -1,0 +1,254 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+$height-nav: 100px;
+$padding-container: 40px;
+
+footer {
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 100vh;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transition: ease 0.2s opacity;
+  opacity: 0;
+
+  .closeFooter {
+    margin: auto auto 24px;
+
+    button {
+      padding: 10px 32px;
+      cursor: pointer;
+      background: linear-gradient(to right, rgb(0, 241, 255), rgb(0, 173, 255));
+      background-position: 0 0;
+      background-size: 400% 400%;
+      transition: all ease-in 0.3s;
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      opacity: 0;
+
+      &:hover {
+        background-position: right center;
+      }
+
+      svg {
+        margin-left: 16px;
+      }
+    }
+  }
+
+  .footer-content {
+    background: #fefefe;
+    padding: $padding-container;
+    transform: translateY(500px);
+    transition: ease 0.2s all;
+
+    .nav--list {
+      list-style: none;
+
+      li {
+        a {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &.footer--open {
+    top: 0;
+    opacity: 1;
+
+    .closeFooter {
+      margin: auto auto 24px;
+
+      button {
+        opacity: 1;
+      }
+    }
+
+    .footer-content {
+      transform: translateY(0);
+    }
+  }
+}
+
+main {
+  > nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: $height-nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 $padding-container;
+
+    .nav--burguer {
+      span {
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-image: linear-gradient(
+          to right,
+          rgb(0, 241, 255),
+          rgb(0, 173, 255)
+        );
+        margin: 5px 0;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .nav--logo {
+      display: flex;
+      flex-direction: column;
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+
+      span {
+        background-image: linear-gradient(
+          to right,
+          rgb(0, 241, 255),
+          rgb(0, 173, 255)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+}
+
+.scroll {
+  height: 300vh;
+  background: black;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.container {
+  height: 100vh;
+  padding-top: $height-nav;
+  padding-bottom: $height-nav;
+  padding-left: $padding-container;
+  padding-right: $padding-container;
+  display: flex;
+  position: fixed;
+  width: 100%;
+}
+
+.container-intro {
+  background: #111111;
+
+  .page-intro {
+    display: flex;
+    gap: 80px;
+    flex-direction: row;
+    color: rgb(0, 241, 255);
+
+    h1 {
+      font-size: 56px;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    p {
+      margin-top: 32px;
+      font-size: 24px;
+      max-width: 600px;
+      font-weight: 300;
+    }
+
+    .page--info-button {
+      margin-top: 80px;
+      display: flex;
+
+      a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 16px 32px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+
+        background: linear-gradient(
+          to right,
+          rgb(0, 241, 255),
+          rgb(0, 173, 255)
+        );
+        background-position: 0 0;
+        background-size: 400% 400%;
+        transition: all ease-in 0.3s;
+
+        &:hover {
+          background-position: 100% 0;
+        }
+
+        svg {
+          margin-left: 24px;
+        }
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    a {
+      color: rgb(0, 241, 255);
+    }
+  }
+}
+
+.container-about {
+  transition: all 1s ease;
+  top: 100vh;
+  background: #fefefe;
+}
+
+.container-portifolio {
+  transition: all 1s ease;
+  top: 100vh;
+  background: red;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  align-items: center;
+}
