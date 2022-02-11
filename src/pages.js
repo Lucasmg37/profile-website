@@ -25,6 +25,20 @@ class Page {
         name: 'Experiências',
         element: document.getElementById('page-3'),
       },
+      {
+        index: 4,
+        min: 100,
+        max: 100,
+        name: 'Portifólio',
+        element: null,
+      },
+      {
+        index: 5,
+        min: 100,
+        max: 100,
+        name: 'Contatos',
+        element: null,
+      },
     ];
 
     this.init();

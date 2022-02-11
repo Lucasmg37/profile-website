@@ -16,7 +16,7 @@
   <body>
     <main>
       <nav>
-        <button class="nav--logo">
+        <button class="logo">
           <span>LUC</span>
           <span>AS</span>
         </button>
@@ -29,6 +29,9 @@
       <div class="scroll"></div>
 
       <div class="container container-intro">
+        <div class="container-intro--video">
+          <video muted autoplay loop src="./assets/videos/intro.mp4"></video>
+        </div>
         <div class="page page-intro">
           <div class="social">
             <a href=""> <i data-feather="github"></i></a>
@@ -43,14 +46,19 @@
               focado no front end.
             </p>
             <div class="page--info-button">
-              <a href="#portifolio"
+              <a id="page-button--portifolio" href="#"
                 >Ver projetos <i data-feather="arrow-right"></i>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div id="page-2" class="container container-about">Sobre</div>
+      <div id="page-2" class="container container-about">
+        <div class="header-page">
+          <p>Sobre Mim</p>
+          <h1><span>Sobre Mim</span></h1>
+        </div>
+      </div>
 
       <div id="page-3" class="container container-portifolio">
         <h1>Portifólio</h1>
@@ -61,8 +69,18 @@
         <button>Fechar <i data-feather="x"></i></button>
       </div>
       <div class="footer-content">
+        <button class="logo">
+          <span>LUC</span>
+          <span>AS</span>
+        </button>
         <ul class="nav--list"></ul>
+        <div class="footer--social">
+          <a href=""> <i data-feather="github"></i></a>
+          <a href=""> <i data-feather="linkedin"></i></a>
+          <a href=""> <i data-feather="instagram"></i></a>
+        </div>
       </div>
+      <div class="footer--copyright">Direitos reservados © 2022 Lucas Dias</div>
     </footer>
   </body>
 </html>

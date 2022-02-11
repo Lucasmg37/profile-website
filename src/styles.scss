@@ -27,7 +27,7 @@ footer {
   z-index: 1;
   display: flex;
   flex-direction: column;
-  transition: ease 0.2s opacity;
+  transition: ease 1s all;
   opacity: 0;
 
   .closeFooter {
@@ -58,18 +58,82 @@ footer {
     }
   }
 
+  .footer--copyright {
+    background: #fefefe;
+    font-weight: 300;
+    text-align: center;
+    padding: 24px;
+    color: #666;
+  }
+
   .footer-content {
     background: #fefefe;
-    padding: $padding-container;
+    padding: 80px $padding-container;
     transform: translateY(500px);
     transition: ease 0.2s all;
+    display: flex;
+    gap: 40px;
+    align-items: center;
 
     .nav--list {
       list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
 
       li {
         a {
           cursor: pointer;
+          font-weight: 500;
+          font-size: 24px;
+          color: #666;
+          padding: 8px;
+          display: flex;
+          transition: ease 0.2s all;
+
+          &::before {
+            content: "";
+            display: block;
+            transition: ease 0.2s all;
+            width: 0;
+            margin: auto 8px 0 0;
+            height: 2px;
+            background: linear-gradient(
+              to right,
+              rgb(0, 241, 255),
+              rgb(0, 173, 255)
+            );
+          }
+
+          &:hover {
+            color: rgb(0, 173, 255);
+
+            &::before {
+              width: 24px;
+            }
+          }
+        }
+      }
+    }
+
+    .footer--social {
+      display: flex;
+      margin: auto 0 0 auto;
+      gap: 24px;
+
+      a {
+        color: rgb(0, 173, 255);
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid transparent;
+        transition: ease 0.2s all;
+
+        &:hover {
+          border: 2px solid rgb(0, 241, 255);
         }
       }
     }
@@ -90,6 +154,25 @@ footer {
     .footer-content {
       transform: translateY(0);
     }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+
+  span {
+    background-image: linear-gradient(
+      to right,
+      rgb(0, 241, 255),
+      rgb(0, 173, 255)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
   }
 }
 
@@ -120,25 +203,6 @@ main {
         transition: all 0.3s ease;
       }
     }
-
-    .nav--logo {
-      display: flex;
-      flex-direction: column;
-      font-size: 24px;
-      font-weight: bold;
-      color: #fff;
-
-      span {
-        background-image: linear-gradient(
-          to right,
-          rgb(0, 241, 255),
-          rgb(0, 173, 255)
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
-    }
   }
 }
 
@@ -162,8 +226,67 @@ main {
   width: 100%;
 }
 
+.header-page {
+  text-align: center;
+  width: 100%;
+
+  p {
+    font-size: 80px;
+    font-weight: 900;
+    opacity: 0.03;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 56px;
+    margin-top: -72px;
+    color: #fff;
+    span {
+      background-image: linear-gradient(
+        to right,
+        rgb(0, 241, 255),
+        rgb(0, 173, 255)
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+  }
+}
+
 .container-intro {
   background: #111111;
+
+  .container-intro--video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      background: rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    video {
+      width: auto;
+      height: 100vh;
+      margin: auto;
+    }
+  }
 
   .page-intro {
     display: flex;
@@ -173,12 +296,13 @@ main {
 
     h1 {
       font-size: 56px;
-      font-weight: 400;
+      font-weight: 500;
     }
 
     h2 {
       font-size: 40px;
-      font-weight: 500;
+      font-weight: 900;
+      color: #fff;
     }
 
     p {
